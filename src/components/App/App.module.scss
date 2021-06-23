@@ -1,0 +1,23 @@
+@import "../../base-styles/variables";
+
+body {
+  background-color: $color-bg;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: $color-text;
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+}
