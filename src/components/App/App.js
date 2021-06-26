@@ -13,6 +13,8 @@ const App = () => {
     sort: 1
   });
 
+  let fetchedTickets = [];
+
   const [tickets, setTickets] = useState([]);
   const [filteredTickets, setFilteredTickets] = useState([]);
   const [sortedTickets, setSortedTickets] = useState([]);
@@ -41,10 +43,11 @@ const App = () => {
       const gotTickets = await getTickets(searchId);
 
       if (gotTickets.tickets.length) {
-        setTickets(prev => [...prev, ...gotTickets.tickets]);
+        fetchedTickets = [...fetchedTickets, ...gotTickets.tickets];
       }
 
       if (gotTickets.stop) {
+        setTickets(fetchedTickets);
         setLoading(false);
         return;
       }
