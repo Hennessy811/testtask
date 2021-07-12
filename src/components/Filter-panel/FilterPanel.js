@@ -1,5 +1,7 @@
 import React from 'react';
+// В нейминге файлов и папок лучше придерживаться чего-то одного: FilterPanel/Filter-panel 
 import s from './Filter-panel.module.scss';
+// можно просто cn (имхо, clsx немного удобнее)
 import classNames from "classnames";
 
 const FilterPanel = ({onChangeHandler, filterState, stops}) => {

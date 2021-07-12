@@ -24,6 +24,7 @@ export const stopsCount = (stops) => {
     case 3: {
       return '3 пересадки';
     }
+    // если пересадок станет 4, кажется это будет неправильный вывод
     default: {
       return 'Без пересадок';
     }

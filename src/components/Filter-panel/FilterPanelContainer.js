@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import {generateIndexesArr} from "../../helpers";
 import FilterPanel from "./FilterPanel";
 
+// если мы используем пропсы без TypeScript, 
+// очень рекомендуется указывать также propTypes и defaultProps, 
+// чтобы хотя бы понимать, какие пропсы здесь могут быть
 const FilterPanelContainer = (props) => {
   const {onFilterHandler, stops} = props;
   const [filterState, setFilterState] = useState(new Array(stops.length).fill(true));
